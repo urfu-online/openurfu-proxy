@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  reverse:
+    container_name: openurfu-proxy
+    hostname: openurfu-proxy
+    restart: always
+    image: nginx:alpine
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - ./nginx:/etc/nginx
+      - ./ssl:/etc/ssl/private
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+    networks:
+      mailcow-network:
+        external: true
