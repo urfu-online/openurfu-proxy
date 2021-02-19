@@ -7,8 +7,8 @@ services:
     restart: always
     image: nginx:alpine
     ports:
-      - 80:80
-      - 443:443
+      - 0.0.0.0:80:80
+      - 0.0.0.0:443:443
     volumes:
       - ./nginx:/etc/nginx
       - ./ssl:/etc/ssl/private
