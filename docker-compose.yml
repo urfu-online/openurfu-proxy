@@ -11,7 +11,7 @@ services:
       - 0.0.0.0:443:443
     volumes:
       - ./nginx:/etc/nginx
-      - ./ssl:/etc/ssl/private
+      - ./ssl:/etc/ssl
       - /var/run/docker.sock:/tmp/docker.sock:ro
     networks:
       - mailcow
