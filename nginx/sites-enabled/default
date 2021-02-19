@@ -18,10 +18,10 @@ server {
 
 
     listen 443 ssl; # managed by Certbot
-    ssl_certificate /etc/letsencrypt/live/sentry.openurfu.ru/fullchain.pem;
-    ssl_certificate_key /etc/letsencrypt/live/sentry.openurfu.ru/privkey.pem;
-    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
-    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+    ssl_certificate /etc/ssl/private/sentry.openurfu.ru/fullchain.pem;
+    ssl_certificate_key /etc/ssl/private/sentry.openurfu.ru/privkey.pem;
+    include /etc/ssl/private/options-ssl-nginx.conf; # managed by Certbot
+    ssl_dhparam /etc/ssl/private/ssl-dhparams.pem; # managed by Certbot
 
 }
 
@@ -52,10 +52,10 @@ server {
 
 
     listen 443 ssl http2;
-    ssl_certificate /root/mailcow-dockerized/data/assets/ssl/cert.pem;
-    ssl_certificate_key /root/mailcow-dockerized/data/assets/ssl/key.pem;
-    include /etc/letsencrypt/options-ssl-nginx.conf;
-    ssl_dhparam /root/mailcow-dockerized/data/assets/ssl/dhparams.pem;
+    ssl_certificate /etc/ssl/private/mail.openurfu.ru/fullchain.pem;
+    ssl_certificate_key /etc/ssl/private/mail.openurfu.ru/privkey.pem;
+    include /etc/ssl/private/options-ssl-nginx.conf; # managed by Certbot
+    ssl_dhparam /etc/ssl/private/ssl-dhparams.pem; # managed by Certbot
 
 }
 
