@@ -14,6 +14,8 @@ services:
       - ./ssl:/etc/ssl/private
       - /var/run/docker.sock:/tmp/docker.sock:ro
     networks:
-      default:
-        external:
-          name: br-mailcow
+      - mailcow
+networks:
+  mailcow:
+    external:
+      name: br-mailcow
