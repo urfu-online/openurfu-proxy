@@ -15,4 +15,5 @@ services:
       - /var/run/docker.sock:/tmp/docker.sock:ro
     networks:
       mailcow-network:
-        external: true
+        external:
+          name: br-mailcow
