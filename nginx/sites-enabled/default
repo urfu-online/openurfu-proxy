@@ -54,8 +54,8 @@ server {
     listen 443 ssl http2;
     ssl_certificate /etc/ssl/mail.openurfu.ru/fullchain.pem;
     ssl_certificate_key /etc/ssl/mail.openurfu.ru/privkey.pem;
-    include /etc/ssl/private/options-ssl-nginx.conf; # managed by Certbot
-    ssl_dhparam /etc/ssl/private/ssl-dhparams.pem; # managed by Certbot
+    include /etc/ssl/options-ssl-nginx.conf; # managed by Certbot
+    ssl_dhparam /etc/ssl/ssl-dhparams.pem; # managed by Certbot
 
 }
 
